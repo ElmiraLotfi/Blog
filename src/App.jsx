@@ -1,18 +1,10 @@
-import { gql, useQuery } from "@apollo/client"
+import Header from "./components/layout/Header"
 
-const QUERY =gql`
-query{
-  authors{
-    name
-  }
-}
-`;
 function App() {
-  const {loading , data} = useQuery(QUERY);
-  console.log({loading,data});
+ 
   return (
     <div>
-    <h3>Weblog</h3>
+    <Header/>
     </div>
   )
 }
