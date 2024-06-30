@@ -3,7 +3,7 @@ import BookIcon from '@mui/icons-material/Book';
 
 function Header() {
   return (
-    <AppBar>
+    <AppBar position="sticky">
         <Container maxWidth="lg">
             <Toolbar>
                 <Typography 
