@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './styles/index.css'
-import theme from './mui/theme.js'
 
-import { ThemeProvider } from '@emotion/react'
 import { ApolloClient,ApolloProvider,InMemoryCache } from '@apollo/client'
+import { ThemeProvider } from '@emotion/react'
+import theme from './mui/theme.js'
+import App from './App.jsx'
+
+import './styles/index.css'
+import './styles/fonts.css'
 
 const client = new ApolloClient({
-  uri:"https://api-us-west-2.hygraph.com/v2/clxzu3lpg03h907w8uqed6dsn/master",
+  uri:import.meta.env.VITE_GRAPHCMS_URI,
   cache:new InMemoryCache(),
 });
 
