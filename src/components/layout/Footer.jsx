@@ -1,0 +1,21 @@
+import { Typography } from '@mui/material'
+
+function Footer() {
+  return (
+ <footer>
+    <Typography 
+    component="p" 
+    variant="p" 
+    bgcolor="#f7f7f7"
+    color="primary"
+    textAlign="center"
+    padding="10px"
+    mt={10}
+    >
+        پروژه وبلاگ با graphql
+    </Typography>
+ </footer>
+  )
+}
+
+export default Footer
