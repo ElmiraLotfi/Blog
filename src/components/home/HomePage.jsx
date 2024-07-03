@@ -1,6 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material"
-import Blog from "../blog/Blog"
-import Author from "../author/Author"
+import Blogs from "../blog/Blogs"
+import Authors from "../author/Authors"
 
 
 function HomePage() {
@@ -16,7 +16,7 @@ function HomePage() {
              >
                 نویسندگان
              </Typography>
-             <Author/>
+             <Authors/>
         </Grid>
         <Grid item xs={12} md={9} mt={4}>
             <Typography
@@ -27,7 +27,7 @@ function HomePage() {
              >
                 مقالات
              </Typography>
-             <Blog/>
+             <Blogs/>
         </Grid>
     </Grid>
   </Container>

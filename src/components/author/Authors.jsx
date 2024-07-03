@@ -2,8 +2,9 @@ import { useQuery } from '@apollo/client'
 import { GET_AUTHORS_INO } from '../../graphql/queries'
 import { Avatar, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Author() {
+function Authors() {
   const {loading , data,errors} =useQuery( GET_AUTHORS_INO);
   
   if (loading) return <h3>Loding...</h3>;
@@ -17,8 +18,8 @@ function Author() {
       authors.map((author,index)=>(
       <React.Fragment key={author.id}>
       <Grid item  xs={12} padding={2}>
-        <a
-        href={`/authors/${author.slug}`}
+        <Link 
+        to={`/authors/${author.slug}`}
         style={{
           display:"flex",
           alignItems:"center",
@@ -29,7 +30,7 @@ function Author() {
           <Typography component="p" variant="p" color="text.primary">
           {author.name}
           </Typography>
-        </a>
+        </Link>
       </Grid>
       {index !== authors.length -1  && (
         <Grid item xs={12}>
@@ -42,4 +43,4 @@ function Author() {
   )
 }
 
-export default Author
+export default Authors

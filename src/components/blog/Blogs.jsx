@@ -3,11 +3,7 @@ import { GET_BLOGS_INFO } from "../../graphql/queries";
 import { Grid } from "@mui/material";
 import CardEL from "../shared/CardEL";
 
-
-
-
-
-function Blog() {
+function Blogs() {
   const { loading, data, errors } = useQuery(GET_BLOGS_INFO);
 
   if (loading) return <h3>Loding...</h3>;
@@ -25,4 +21,4 @@ function Blog() {
 );
 }
 
-export default Blog;
+export default Blogs;
