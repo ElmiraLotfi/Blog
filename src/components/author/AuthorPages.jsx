@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Avatar, Container, Grid, Typography } from "@mui/material";
 import sanitizeHtml from "sanitize-html";
 import CardEL from "../shared/CardEL";
+import Loader from "../shared/Loader"
  
 function AuthorPages() {
   const {slug}=useParams();
@@ -12,7 +13,7 @@ function AuthorPages() {
   const {loading,data,error}=useQuery(GET_AUTHOR_INFO,{
     variables:{slug}
   });
-  if(loading) return <h3>loading...</h3>
+  if(loading) return <Loader/>
   if(error) return <h3>error...</h3>
   const {
     author: { name, field, avatar, description, posts },

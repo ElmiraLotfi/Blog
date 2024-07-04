@@ -3,11 +3,12 @@ import { GET_AUTHORS_INO } from '../../graphql/queries'
 import { Avatar, Divider, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Loader from "../shared/Loader"
 
 function Authors() {
   const {loading , data,errors} =useQuery( GET_AUTHORS_INO);
   
-  if (loading) return <h3>Loding...</h3>;
+  if (loading) return <Loader/>;
 
   if (errors) return <h4>Error...</h4>;
 
